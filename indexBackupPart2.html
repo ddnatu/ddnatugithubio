@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Practice PluralSight</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link href="bootstrap/fonts/glyphicons-halflings-regular.eot" />
+	<link href="bootstrap/fonts/glyphicons-halflings-regular.svg" />
+	<link href="bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+	<link href="bootstrap/fonts/glyphicons-halflings-regular.woff" />
+	<link href="bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+</head>
+<body>
+<div id="root"></div>
+<script src="JQuery/jquery-1.9.1.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="React/react-0.13.1.js"></script>
+<script src="React/react-with-addons-0.13.1.js"></script>
+<script src="React/JSXTransformer-0.13.1.js"></script>
+<script type="text/jsx">
+var Form = React.createClass({
+	handleSubmit:function(e){
+		e.preventDefault();
+		var loginInput = React.findDOMNode(this.refs.login) ;
+		// Adding the card...
+		this.props.addCard(loginInput.value);
+		// Resetting the field...
+		loginInput.value = '';
+	},
+	render: function(){
+		return(
+			<form onSubmit={this.handleSubmit}>
+				<input placeholder="github login" ref="login" />
+				<button>Add</button>
+			</form>
+		)
+	}
+})
+var Card = React.createClass({
+	getInitialState:function(){
+		return {};
+	},
+	componentDidMount:function(){
+		var self = this;
+		$.get("https://api.github.com/users/"+this.props.login,function(data){
+		 	self.setState(data);
+		});
+	},
+	render:function(){
+		return(
+			<div>
+				<img src={this.state.avatar_url} alt="Profile Picture" width="120" />
+				<h2>{this.state.name}</h2>
+				<h3>{this.state.company}</h3>
+				<hr />
+			</div>
+		);
+	}
+});
+var Main = React.createClass({
+	getInitialState: function(){
+		return {logins:['spicyj','zpao','fisherwebdev']}
+	},
+	addCard: function(loginToAdd){
+		this.setState({logins:this.state.logins.concat(loginToAdd)});
+	},
+	render:function(){
+		var cards = this.state.logins.map(function(login){
+			return(
+				<Card login={login} />
+			);
+		});
+		return(
+			<div>
+				<Form addCard={this.addCard} />
+	    		{cards}
+			</div>
+		);
+	}
+});
+React.render(<Main />,
+    document.getElementById("root")
+);
+</script>
+</body>
+</html>
