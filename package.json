@@ -1,0 +1,25 @@
+{
+  "name": "slick-carousel-starter",
+  "version": "1.0.0",
+  "description": "slick carousel starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ddnatu"
+  },
+  "keywords": [
+    "slick-carousel",
+    "jquery",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": "devdutta natu",
+  "license": "ISC",
+  "dependencies": {
+    "slick-carousel": "^1.7.1"
+  }
+}

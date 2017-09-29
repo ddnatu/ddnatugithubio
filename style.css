@@ -1,44 +1,32 @@
 
-.starFrames .glyphicon{
-	display: inline-block;
-	margin: 0.3em;
-	font-size: 2.75rem;	
+/* the slides */
+/*.slick-slide {
+    margin: 0 27px;
+}*/
+/* the parent */
+/*.slick-list {
+    margin: 0 -27px;
+}*/
+
+.editorContainer{
+    margin: 0 auto;
+    padding: 1% 3% 3% 3%;
+    width: 80%;
+    color: #333;
+    background: #B3D399; 
 }
-.starFrames,.answerFrames{
-	width: 30%;
-	float: left;
-}
-.buttonFrame{
-	margin-top: 50px;
-	width: 20%;
-	float: left;
-	text-align: center;
-	font-size: 1.75rem;
-}
-.answerFrames .well , .starFrames .well{
-	height: 300px;
-}
-.numbersFrames .number , .answerFrames .well span{
-	display: inline-block;
-	margin:0.5em;
-	background-color: #bbb;
-	width: 30px;
-	text-align: center;
-	font-size: 22px;
-	border-radius:50%;
-	cursor:pointer;
-}
-.numbersFrames .selected-true{
-	background-color: #e8e8e8;
-	color: #ddd;
-	cursor: not-allowed;
-}
-.numbersFrames .used-true{
-	background-color: #aaddaa;
-	color: #99bb99;
-	cursor: not-allowed;
-}
-.numbersFrames .well{
-	margin-top: 25px;
-}
-}
+.container {
+    margin: 0 auto;
+    padding: 1% 3% 3% 3%;
+    width: 80%;
+    color: #333;
+    background: #419be0;
+  }
+  .carouselImageContainer{
+      cursor: pointer;
+  }
+  .carouselImages {
+      max-width: 100%;
+      height: auto;
+  }
+  

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    
+    <title>Slick Nairobil rousel Example</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+    <section class="editorContainer">
+ 
+        <div>
+            <input class="test" id="dots" type="checkbox" name="dots" value= "" checked />
+            <label for="dots">Dots</label>
+            <input class="test" id="infinite" type="checkbox" name="infiniteLoop" value= "" checked />
+            <label for="infinite">Infinte Looping</label>
+            <input class="test" id="autoPlay" type="checkbox" name="autoPlay" value= "" checked />
+            <label for="autoPlay">AutoPlay</label>
+            <input class="test" id="lazyLoading" type="checkbox" name="lazy loading" value= "" />
+            <label for="lazyLoading">Lazy Loading</label>
+            <input class="test" id="variableWidth" type="checkbox" name="variableWidth" value= "" />
+            <label for="variableWidth">Variable Width</label>
+            <input class="test" id="vertical" type="checkbox" name="vertical" value= "" />
+            <label for="vertical">Vertical Slide</label>
+            <input class="test" id="rtl" type="checkbox" name="rtl" value= "" />
+            <label for="rtl">Right to Left</label>
+        </div>
+        <div>
+            <input class="classText" id="speedControl" type="text" name="speedControl" value= "300" />
+            <label for="speedControl">Speed</label>
+            <input class="classText" id="slidesToShow" type="text" name="slidesToShow" value= "1" />
+            <label for="slidesToShow">SlidesToShow</label>
+            <input class="classText" id="slidesToScroll" type="text" name="slidesToScroll" value= "1" />
+            <label for="slidesToScroll">SlidesToScroll</label>
+        </div>
+    </section>
+
+    <!-- Slick carousel example. -->
+    <div class='container'>
+        <!-- For Gutters between carousel images -->
+        <!-- <div class='single-item' style="margin: 0 -27px;">
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg1.jpg" alt="carouselImage1"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg2.jpg" alt="carouselImage2"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg3.jpg" alt="carouselImage3"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg4.jpg" alt="carouselImage4"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg5.jpg" alt="carouselImage5"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg6.jpg" alt="carouselImage6"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg7.jpg" alt="carouselImage7"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg8.jpg" alt="carouselImage8"/></section>
+            <section class="carouselImageContainer" style="margin: 0 27px;"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg9.jpg" alt="carouselImage9"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" style="margin: 0 27px;" src= "./CarouselImagesLondoff/CrslImg10.jpg" alt="carouselImage10"/></section>
+        </div> -->
+        <div class='single-item'>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg1.jpg" alt="carouselImage1"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg2.jpg" alt="carouselImage2"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg3.jpg" alt="carouselImage3"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg4.jpg" alt="carouselImage4"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg5.jpg" alt="carouselImage5"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg6.jpg" alt="carouselImage6"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg7.jpg" alt="carouselImage7"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg8.jpg" alt="carouselImage8"/></section>
+            <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg9.jpg" alt="carouselImage9"/></section>
+            <!-- <section class="carouselImageContainer"><img class="carouselImages" src= "./CarouselImagesLondoff/CrslImg10.jpg" alt="carouselImage10"/></section> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./node_modules/slick-carousel/slick/slick.js"></script>
+    <script type="text/javascript">
+
+        // var dots = document.getElementById('dots').value;
+        // var infinte = document.getElementById('infinite').value;
+        // var lazyLoading = document.getElementById('lazyLoading').value;
+        // var speedControl = document.getElementById('speedControl').value;
+        // var slidesToScroll = document.getElementById('slidesToScroll').value;
+        // var slidesToShow = document.getElementById('slidesToShow').value;
+        // var autoPlay = document.getElementById('autoPlay').value;
+        // var variableWidth = document.getElementById('variableWidth').value;
+        // var vertical = document.getElementById('vertical').value;
+
+        var dots = $('#dots').is(":checked");
+        var infinite = $('#infinite').is(":checked");
+        var autoplay = $('#autoPlay').is(":checked");
+        var vertical = $('#vertical').is(":checked");
+        var variableWidth = $('#variableWidth').is(":checked");
+        var lazyLoading = $("lazyLoading").is(":checked");
+        var rtl = $("#rts").is(":checked");
+        var speed = $('#speedControl').val();
+        var slidesToShow = $('#slidesToShow').val();
+        var slidesToScroll = $('#slidesToScroll').val();
+
+        $('.test').on('click', function(event){
+            switch(event.target.id) {
+                case 'dots':
+                    if($("#dots").is(":checked")){
+                        dots = true;
+                    }else {
+                        dots = false;
+                    }
+                    break;
+                case 'infinite':
+                    if($("#infinite").is(":checked")){
+                        infinite = true;
+                    }else {
+                        infinite = false;
+                    }
+                    break;
+                case 'autoPlay':
+                    if($("#autoPlay").is(":checked")){
+                        autoplay = true;
+                    }else {
+                        autoplay = false;
+                    }
+                    break;
+                case 'vertical':
+                    if($("#vertical").is(":checked")){
+                        vertical = true;
+                    }else {
+                        vertical = false;
+                    }
+                    break;
+                case 'variableWidth':
+                    if($("#variableWidth").is(":checked")){
+                        variableWidth = true;
+                    }else {
+                        variableWidth = false;
+                    }
+                    break;
+                case 'lazyLoading':
+                    if($("#lazyLoading").is(":checked")){
+                        lazyLoading = true;
+                    }else {
+                        lazyLoading = false;
+                    }
+                    break;
+                case 'rtl':
+                    if($("#rtl").is(":checked")){
+                        rtl = true;
+                    }else {
+                        rtl = false;
+                    }
+                    break;    
+                default :
+                    console.log('default');
+            }
+            $(".single-item").slick('unslick');;
+            $(".single-item").slick({
+                dots: Boolean(dots),
+                infinite: Boolean(infinite),
+                speed: speed,
+                autoplay: Boolean(autoplay),
+                slidesToShow: parseInt(slidesToShow),
+                slidesToScroll: parseInt(slidesToScroll),
+                //swipe: true,
+                //swipeToSlide: true,
+                // vertical: true,
+                //fade: false,
+                //cssEase: 'linear',
+                rtl: Boolean(rtl),
+            });
+        });
+
+        $('.classText').on('change', function(event){
+            switch(event.target.id) {
+                        case 'speedControl': 
+                                speed = parseInt($("#speedControl").val());
+                                break;
+                        case 'slidesToShow': 
+                            $("#slidesToShow").change(function(){
+                                slidesToShow = parseInt($("#slidesToShow").val());
+                            });
+                            break;
+                        case 'slidesToScroll': 
+                            $("#slidesToScroll").change(function(){
+                                slidesToScroll = parseInt($("#slidesToScroll").val());
+                            });
+                            break;
+                        default: 
+                            console.log('default nested inside');        
+            }
+            $(".single-item").slick('unslick');;
+            $(".single-item").slick({
+                dots: Boolean(dots),
+                infinite: Boolean(infinite),
+                speed: speed,
+                autoplay: Boolean(autoplay),
+                slidesToShow: parseInt(slidesToShow),
+                slidesToScroll: parseInt(slidesToScroll),
+                swipe: true,
+                // swipeToSlide: true,
+                // vertical: true,
+                // fade: false,
+                // cssEase: 'linear',
+                rtl: Boolean(rtl),
+            });
+        });
+        
+        $(".single-item").slick({
+            dots: Boolean(dots),
+            infinite: Boolean(infinite),
+            speed: speed,
+            autoplay: Boolean(autoplay),
+            slidesToShow: parseInt(slidesToShow),
+            slidesToScroll: parseInt(slidesToScroll),
+            swipe: true,
+            // swipeToSlide: true,
+            // vertical: true,
+            //fade: false,
+            // cssEase: 'linear',
+            rtl: Boolean(rtl),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        speed: 100,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                },
+                {
+                    breakpoint: 360,
+                    settings: "unslick"
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
